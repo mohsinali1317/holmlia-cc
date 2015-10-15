@@ -1,8 +1,10 @@
 <template name="layout">
-<div class="container">
+    <div id="wrap">
         {{> header}}
     <div id="main" class="row-fluid">
         {{> yield}}
     </div>
-</div>
+    </div>
+
+    {{> footer}}
 </template>
