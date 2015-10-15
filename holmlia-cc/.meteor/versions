@@ -58,6 +58,7 @@ iron:router@1.0.12
 iron:url@1.0.11
 jquery@1.11.4
 launch-screen@1.0.4
+less@2.5.0_3
 livedata@1.0.15
 logging@1.0.8
 meteor@1.1.9
@@ -70,6 +71,8 @@ momentjs:moment@2.10.6
 mongo@1.1.2
 mongo-id@1.0.1
 mongo-livedata@1.0.9
+nemo64:bootstrap@3.3.5_2
+nemo64:bootstrap-data@3.3.5
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
@@ -88,7 +91,6 @@ standard-minifiers@1.0.1
 templating@1.1.4
 templating-tools@1.0.0
 tracker@1.0.9
-twbs:bootstrap@3.3.5
 ui@1.0.8
 underscore@1.0.4
 url@1.0.5
