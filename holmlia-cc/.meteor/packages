@@ -23,3 +23,7 @@ cfs:standard-packages
 cfs:filesystem
 less
 nemo64:bootstrap
+cfs:dropbox
+aldeed:simple-schema
+cfs:autoform
+cfs:graphicsmagick

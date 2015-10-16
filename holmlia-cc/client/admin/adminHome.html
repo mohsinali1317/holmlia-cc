@@ -1,0 +1,15 @@
+<template name="admin">
+
+    {{#autoForm id="insertForm" type="insert" collection="Players"}}
+        {{> afQuickField name="firstName"}}
+        {{> afQuickField name="lastName"}}
+        {{> afQuickField name="gender" options=genderOptions }}
+        {{> afQuickField name="role" options=roleOptions }}
+        {{> afQuickField name="birthday"}}
+        {{> afQuickField name="memberSince"}}
+        {{> afQuickField name="speciality"}}
+        {{> afQuickField name="imageId" type="cfs-file" collection="playerProfilePictures"}}
+        <button type="submit">Submit</button>
+    {{/autoForm}}
+
+</template>
