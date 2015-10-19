@@ -11,32 +11,57 @@ var PlayerSchema = new SimpleSchema({
     lastName: {
         type: String
     },
-    role : {
-      type : String,
-        allowedValues : ['Captain','Vice-Captain','Keeper']
-    },
-    speciality : {
-      type : String
-    },
-    birthday: {
-        type: Date,
+    email: {
+        type: String,
         optional: true
     },
-    memberSince: {
+    phoneNumber: {
+        type: String
+    },
+    battingStyle: {
+        type: String,
+        allowedValues: ['Right-hand bat', 'Left-hand bat']
+    },
+    bowlingStyle: {
+        type: String,
+        allowedValues: ['Right-hand slow', 'Left-hand slow', 'Left-hand fast', 'Right-hand fast']
+    },
+    birthday: {
         type: Date,
         optional: true
     },
     gender: {
         type: String,
         allowedValues: ['Male', 'Female'],
-        optional: true
+        defaultValue: 'Male'
     },
     imageId: {
         type: String
+    },
+    memberSince: {
+        type: Date,
+        optional: true
+    },
+    isCaptain: {
+        type: Boolean,
+        defaultValue: false
+    },
+    isViceCaptain: {
+        type: Boolean,
+        defaultValue: false
+    },
+    isLeader: {
+        type: Boolean,
+        defaultValue: false
+    },
+    isKeeper: {
+        type: Boolean,
+        defaultValue: false
     }
+
 });
 
-var createThumb = function(fileObj, readStream, writeStream) {
+var createThumb = function (fileObj, readStream, writeStream) {
     // Transform the image into a 10x10px thumbnail
     gm(readStream, fileObj.name()).resize('200', '200').stream().pipe(writeStream);
 };

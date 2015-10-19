@@ -1,13 +1,20 @@
 <template name="admin">
 
     {{#autoForm id="insertForm" type="insert" collection="Players"}}
-        {{> afQuickField name="firstName"}}
+        {{> afQuickField name="firstName" class="required"}}
         {{> afQuickField name="lastName"}}
-        {{> afQuickField name="gender" options=genderOptions }}
-        {{> afQuickField name="role" options=roleOptions }}
+        {{> afQuickField name="email"}}
+        {{> afQuickField name="phoneNumber"}}
+        {{> afQuickField name="gender" options="allowed"}}
+        {{> afQuickField name="bowlingStyle" options="allowed"}}
+        {{> afQuickField name="battingStyle" options="allowed"}}
         {{> afQuickField name="birthday"}}
         {{> afQuickField name="memberSince"}}
-        {{> afQuickField name="speciality"}}
+        {{> afQuickField name="isCaptain"}}
+        {{> afQuickField name="isViceCaptain"}}
+        {{> afQuickField name="isLeader"}}
+        {{> afQuickField name="isKeeper"}}
+
         {{> afQuickField name="imageId" type="cfs-file" collection="playerProfilePictures"}}
         <button type="submit">Submit</button>
     {{/autoForm}}
