@@ -1,5 +1,4 @@
-<template name="admin">
-
+<template name="addPlayer">
     {{#autoForm id="insertForm" type="insert" collection="Players"}}
         {{> afQuickField name="firstName" class="required"}}
         {{> afQuickField name="lastName"}}
@@ -18,5 +17,4 @@
         {{> afQuickField name="imageId" type="cfs-file" collection="playerProfilePictures"}}
         <button type="submit">Submit</button>
     {{/autoForm}}
-
 </template>

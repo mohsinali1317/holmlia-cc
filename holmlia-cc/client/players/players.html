@@ -1,15 +1,48 @@
 <template name="players">
-    {{#each players}}
-        {{> player}}
-    {{/each}}
+    <div class="container">
+        <div class="section-header">
+            <h2>The Homlia Team</h2>
+        </div>
+        <div class="row">
+            {{#each players}}
+                {{> player}}
+            {{/each}}
+        </div>
+    </div>
 </template>
 
 <template name="player">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <img src="{{imageUrl.url}}" alt="" class="img-circle" />
-                <h3>{{firstName}}</h3>
+    <div class="col-md-3 col-sm-6 animate slide-up in">
+        <div class="player">
+            <img class="player-img" src="{{imageUrl.url}}">
+
+            <div>
+                <h5>
+                    Full Name :
+                    <small class="title">{{fullName}}
+                        {{#if isCaptain}}
+                            (C)
+                        {{/if}}
+                        {{#if isViceCaptain}}
+                            (VC)
+                        {{/if}}
+                        {{#if isKeeper}}
+                            (WK)
+                        {{/if}}
+                    </small>
+                </h5>
+            </div>
+            <div>
+                <h5>
+                    Batting Style :
+                    <small class="title">{{battingStyle}}</small>
+                </h5>
+            </div>
+            <div>
+                <h5>
+                    Bowling Style :
+                    <small class="title">{{bowlingStyle}}</small>
+                </h5>
             </div>
         </div>
     </div>

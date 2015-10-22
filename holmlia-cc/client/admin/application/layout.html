@@ -1,0 +1,12 @@
+<template name="adminLayout">
+    <div class="wrap">
+        {{> adminHeader}}
+        <div class="container main margin-bottom">
+            <div class="row">
+                {{> yield}}
+            </div>
+        </div>
+    </div>
+    {{> adminFooter}}
+    {{> copyRight}}
+</template>

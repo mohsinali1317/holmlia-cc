@@ -32,8 +32,7 @@ var PlayerSchema = new SimpleSchema({
     },
     gender: {
         type: String,
-        allowedValues: ['Male', 'Female'],
-        defaultValue: 'Male'
+        allowedValues: ['Male', 'Female']
     },
     imageId: {
         type: String
@@ -73,9 +72,16 @@ var dropboxStore = new FS.Store.Dropbox("playerProfilePictures", {
     transformWrite: createThumb, //optional
 });
 
+//var imageStore = new FS.Store.S3("playerProfilePictures", {
+//    accessKeyId: "AKIAJJ54I3TDMAZRPYHA", //required if environment variables are not set
+//    secretAccessKey: "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", //required if environment variables are not set
+//    bucket: "mohsinclubimages", //required
+//    transformWrite: createThumb //optional
+//});
+
+
 PlayerProfilePictures = new FS.Collection("playerProfilePictures", {
     stores: [dropboxStore]
 });
-
 Players.attachSchema(PlayerSchema);
 
